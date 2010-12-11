@@ -1,0 +1,95 @@
+Pastaholic: The 1000000th pastebin.
+
+DESCRIPTION
+
+  A pastebin. IOW, copy some code, put it in the box, chose the language,
+  and submit: you'll have a copy of the code syntax-highlited. Useful if
+  you have to share some snippets of code (e.g., on a mailing list).
+
+  Hard work is actually done by GeSHi: http://qbnz.com/highlighter/
+
+FILES
+
+  Required:
+    * pasta.php -> Generates the pastes.
+    * index.html -> Interface to the pastebin.
+    * geshi.php -> GeSHi.
+    * geshi/* -> Syntax files. (You'll need only syntax files you'll use.)
+
+  Optional:
+    * pasta_config.ini -> Contains customization.
+    * pasta.header.template -> Everything above (and including) '<body>'.
+    * pasta.footer.template -> Everithing below (and including) '</body>'.
+
+REQUIREMENTS
+
+  * Web server
+  * PHP >= 4.3
+
+CUSTOMIZATION
+
+  pasta_config.ini is the file that contains customization. It's a 'ini'
+  file, so it's structured like:
+
+  [section1]
+  option1 = somevalue
+  option2 = 'some other value'
+
+  (Notice the quotes in option with spaces.)
+
+  Here they are:
+
+  ==== [main] ====
+
+  These are the main options.
+
+  * numbers:   Indicates wheter line numbers should be displayed.
+               If not present, no numbers will be shown.
+               Possible valuse: 'normal' (all lines are styled the
+               same); 'fancy' (lines are styled differently).
+               http://qbnz.com/highlighter/geshi-doc.html#line-numbers
+  * container: What kind of HTML container should be used.
+               Possible values: 'pre' (<pre>); 'div' (<div>);
+               'pre_valid' (valid <pre>); pre_table (<pre> and <table>)
+               http://qbnz.com/highlighter/geshi-doc.html#the-code-container
+  * tabs:      Number of spaces for a single tabulation.
+               http://qbnz.com/highlighter/geshi-doc.html#setting-tab-width
+  * directory: directory where pastes are going to be stored. The value
+               is the name of a directory in the root of the website.
+  * header_content and footer_content: Insert strings in header and footer.
+               http://qbnz.com/highlighter/geshi-doc.html#keyword-substitution
+
+  ==== [template] ====
+
+  Let you add HTML content.
+
+  * header:      File that contains the template for the first part of pages.
+                 I.e., everything above (and including) '<body>' of pastes.
+  * footer:      As above, but everything below (and including) '</body>'.
+
+  ==== [classes] ====
+
+  It's possible to declare styles at the beginning of the files.
+  http://qbnz.com/highlighter/geshi-doc.html#using-css-classes
+
+  * id:          Enable ids. Value can be an arbitrary name.
+  * class:       Enable classes. Value can be an arbitrary name.
+
+  ==== [style] ====
+
+  Style customization. The following options are in the form:
+  option['css-property'] = css-value
+  where css-property is a CSS property (e.g., 'font-weight') and
+  css-value its value (e.g., 'bold'; if spaces are present, use quotes)
+  http://qbnz.com/highlighter/geshi-doc.html#changing-styles
+
+  * overall['css-property']: Style for the code (and numbers) block.
+  * line['css-property']: Style for line numbers.
+  * fancy['css-property']: Style for alternate line numbers.
+  * code['css-property']: Style for code.
+  * keyword_groupX['css-property']: Style for keyword in group X, where
+    X is a number from 1 to 4.
+  * comments_line['css-property']: Style for single line comments.
+  * comments_multi['css-property']: Style for comments in multiple lines.
+  * numbers['css-property']: Style for numbers.
+  * strings['css-property']: Style for strings.

@@ -1,0 +1,2 @@
+RemoveHandler .sh
+AddType text/plain .sh
