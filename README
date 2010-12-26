@@ -54,7 +54,7 @@ CUSTOMIZATION
   * tabs:      Number of spaces for a single tabulation.
                http://qbnz.com/highlighter/geshi-doc.html#setting-tab-width
   * directory: directory where pastes are going to be stored. The value
-               is the name of a directory in the root of the website.
+               is the name of a directory relative to 'pasta.php'.
   * header_content and footer_content: Insert strings in header and footer.
                http://qbnz.com/highlighter/geshi-doc.html#keyword-substitution
   * limit:     Maximum size of paste in kilobytes. Default is 20K.
