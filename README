@@ -23,7 +23,6 @@ FILES
 
 REQUIREMENTS
 
-  * Web server
   * PHP >= 4.3
 
 CUSTOMIZATION
