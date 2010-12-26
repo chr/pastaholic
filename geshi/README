@@ -1,0 +1,9 @@
+This file is FYI and is *not* part of GeSHi.
+
+GeSHi (Generic Syntax Highlighter) is a powerful syntax
+highlighter written in PHP: http://qbnz.com/highlighter/
+
+The contents of ./geshi/* and geshi.php are released under
+the GPL: http://qbnz.com/highlighter/
+
+The files distibuted here come from GeSHi version 1.0.8.9.
