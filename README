@@ -58,6 +58,7 @@ CUSTOMIZATION
                is the name of a directory in the root of the website.
   * header_content and footer_content: Insert strings in header and footer.
                http://qbnz.com/highlighter/geshi-doc.html#keyword-substitution
+  * limit:     Maximum size of paste in kilobytes. Default is 20K.
 
   ==== [template] ====
 

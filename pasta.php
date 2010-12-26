@@ -37,6 +37,12 @@ if ( file_exists($geshi_php) ) {
 }
 
 if ( $_POST['pasta'] != '' ) {
+	$limit = isset($config['main']['limit']) ? $config['main']['limit'] : 20;
+	$limit *= 1024;
+	if (mb_strlen($_POST['pasta'], '8bit') >= 20480) {
+		die('Please, don\'t. Keep it below 20K.');
+	}
+
 	$source = $_POST['pasta'];
 	$lang = ( $_POST['lang'] ) ? $_POST['lang'] : 'txt';
 	if ( $_POST['title'] ) {
