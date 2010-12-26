@@ -52,7 +52,9 @@ do
 			fi
 			shift
 			;;
-		*) break ;;
+		*)
+			break
+			;;
 	esac
 done
 

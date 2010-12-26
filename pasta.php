@@ -1,12 +1,14 @@
 <?php
 
-/**************************************************************************
+/********************************************************************
  *
  * Pastaholic: The 1000000th pastebin.
  *
- * All files (except geshi.php and those in geshi/) are public domain.
+ * All files (except geshi.php and those in geshi/) are released into
+ * the public domain. For more information, see http://unlicense.org/
+ * or the accompanying UNLICENSE file.
  *
- *************************************************************************/
+ ********************************************************************/
 
 $script_time_start = microtime(true);
 
@@ -46,8 +48,7 @@ if ( $_POST['pasta'] != '' ) {
 }
 
 function file_name() {
-	$top = 2147468400 - 855622555;
-	return dechex(time() - $top);
+	return base_convert(time() - 1290000000, 10, 36);
 }
 
 function write_file($content, $file) {
