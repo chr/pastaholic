@@ -94,3 +94,9 @@ CUSTOMIZATION
   * comments_multi['css-property']: Style for comments in multiple lines.
   * numbers['css-property']: Style for numbers.
   * strings['css-property']: Style for strings.
+
+LICENSE
+
+  All files (except geshi.php and those in geshi/) are released into
+  the public domain. For more information, see http://unlicense.org/
+  or the accompanying UNLICENSE file.
