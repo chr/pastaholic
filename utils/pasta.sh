@@ -1,10 +1,13 @@
 #!/bin/sh
 
-url=http://chr.tx0.org/pastaholic/pasta.php
+url=http://chr.tx0.org/p/pasta.php
 
 usage() {
 	p=$(basename $0)
-	echo "usage: $p [-title \"a title\" ] [-lang \"language\"] -pasta FILE"
+	echo "usage: $p [--title \"a title\" ] [--lang \"language\"] --pasta FILE"
+	echo
+	echo "short option names: -t (--title), -l (--lang), -p (--pasta)"
+	echo "note: if '--lang (-l) is omitted, 'text' is assumed"
 	exit $1
 }
 
@@ -51,6 +54,9 @@ do
 				usage 3
 			fi
 			shift
+			;;
+		-h|-help|--help)
+			usage 0
 			;;
 		*)
 			break
